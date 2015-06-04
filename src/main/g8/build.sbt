@@ -6,6 +6,8 @@ organization := "$organization$"
 
 version := "$version$"
 
+scalaVersion := "$scala_version$"
+
 incOptions := incOptions.value.withNameHashing(true)
 
 resolvers ++= Seq(
