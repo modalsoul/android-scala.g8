@@ -6,7 +6,7 @@
 
     <uses-sdk
             android:minSdkVersion="$android_min_target$"
-            android:targetSdkVersion="$android-target$"/>
+            android:targetSdkVersion="$android_target$"/>
 
     <application
             android:name="android.support.multidex.MultiDexApplication"
