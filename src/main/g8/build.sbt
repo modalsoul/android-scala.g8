@@ -44,7 +44,7 @@ dexMainFileClasses in Android := Seq(
   "android/support/multidex/MultiDex\$V4.class",
   "android/support/multidex/MultiDex.class",
   "android/support/multidex/MultiDexApplication.class",
-  "android/support/multidex/MultiDexExtractor$1.class",
+  "android/support/multidex/MultiDexExtractor\$1.class",
   "android/support/multidex/MultiDexExtractor.class",
   "android/support/multidex/ZipUtil\$CentralDirectory.class",
   "android/support/multidex/ZipUtil.class"
