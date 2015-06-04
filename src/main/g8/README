@@ -1,5 +1,3 @@
-A sample for the Typesafe Stack (http://typesafe.com/stack).
+Android project using Scala and SBT.
 
-Scala sample project using Scala and SBT.
-
-To run and test it use SBT invoke: 'sbt run'
+To run it use SBT invoke: 'sbt android:run'
