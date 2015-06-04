@@ -1,7 +1,7 @@
-package $package$.$name$.util
+package $package$.$name;format="Camel"$.util
 
 import android.util.Log
-import $package$.$name$.BuildConfig
+import $package$.$name;format="Camel"$.BuildConfig
 
 trait LogTag {
   implicit final val TAG = this.getClass.getSimpleName

@@ -1,4 +1,4 @@
-package $package$.$name$.util
+package $package$.$name;format="Camel"$.util
 
 class Loan[T <: {def close()}] private (value: T) {
   def foreach[U](f: T => U): U = try {

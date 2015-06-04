@@ -1,4 +1,4 @@
-package $package$.$name$
+package $package$.$name;format="Camel"$
 
 import android.content.Context
 import android.view.View
@@ -14,14 +14,14 @@ package object view {
    * @return
    */
   def findAViewById[S <: { def findViewById(id:Int):View }, V <: View](self:S, id:Int):Option[V] = {
-    Option(self.findViewById(id)).map(_.asInstanceOf[A])
+    Option(self.findViewById(id)).map(_.asInstanceOf[V])
   }
 
   def buttonById[S <: { def findViewById(id:Int):View }](self:S, id:Int):Option[Button] = {
-    findAViewById[Button, S](self, id)
+    findAViewById[S, Button](self, id)
   }
 
   def textById[S <: { def findViewById(id:Int):View }](self:S, id:Int):Option[TextView] = {
-    findAViewById[TextView, S](self, id)
+    findAViewById[S, TextView](self, id)
   }
 }
