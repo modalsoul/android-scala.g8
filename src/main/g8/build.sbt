@@ -16,17 +16,21 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.scaloid" %% "scaloid" % "3.6.1-10"
+  "org.scaloid" %% "scaloid" % "4.0"
 )
 
 platformTarget in Android := "android-$android_target$"
 
-proguardOptions in Android ++= Seq()
+proguardCache in Android ++= Seq("org.scaloid")
+
+proguardOptions in Android ++= Seq("-dontobfuscate", "-dontoptimize", "-keepattributes Signature", "-printseeds target/seeds.txt", "-printusage target/usage.txt"
+  , "-dontwarn scala.collection.**" // required from Scala 2.11.4
+  , "-dontwarn org.scaloid.**" // this can be omitted if current Android Build target is android-16
+)
 
 run <<= run in Android
 
 android.Plugin.androidBuild
-
 
 useProguard in Android := false
 
@@ -61,4 +65,4 @@ apkbuildExcludes in Android ++= Seq(
   "META-INF/NOTICE"
 )
 
-javacOptions in Compile ++= Seq("-source", "1.6", "-target", "1.6")
+javacOptions in Compile ++= Seq("-source", "1.7", "-target", "1.7")
